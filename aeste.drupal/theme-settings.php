@@ -1,9 +1,9 @@
 <?php
 
-function basic_settings($saved_settings, $subtheme_defaults = array()) {
+function aeste_drupal_settings($saved_settings, $subtheme_defaults = array()) {
 
   // Get the default values from the .info file.
-  $defaults = basic_theme_get_default_settings('basic');
+  $defaults = aeste_drupal_theme_get_default_settings('basic');
 
   // Merge the saved variables and their default values.
   $settings = array_merge($defaults, $saved_settings);
@@ -12,34 +12,34 @@ function basic_settings($saved_settings, $subtheme_defaults = array()) {
    * Create the form using Forms API
    */
 
-  $form['basic_zen_tabs'] = array(
+  $form['aeste_drupal_zen_tabs'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Use Zen Tabs'),
-    '#default_value' => $settings['basic_zen_tabs'],
+    '#default_value' => $settings['aeste_drupal_zen_tabs'],
     '#description'   => t('Replace the default tabs by the Zen Tabs.'),
     '#prefix'        => '<strong>' . t('Zen Tabs:') . '</strong>',
   );
 
-  $form['basic_wireframe'] = array(
+  $form['aeste_drupal_wireframe'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Display borders around main layout elements'),
-    '#default_value' => $settings['basic_wireframe'],
+    '#default_value' => $settings['aeste_drupal_wireframe'],
     '#description'   => t('<a href="!link">Wireframes</a> are useful when prototyping a website.', array('!link' => 'http://www.boxesandarrows.com/view/html_wireframes_and_prototypes_all_gain_and_no_pain')),
     '#prefix'        => '<strong>' . t('Wireframes:') . '</strong>',
   );
 
-  $form['basic_block_editing'] = array(
+  $form['aeste_drupal_block_editing'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Show block editing on hover'),
     '#description'   => t('When hovering over a block, privileged users will see block editing links.'),
-    '#default_value' => $settings['basic_block_editing'],
+    '#default_value' => $settings['aeste_drupal_block_editing'],
     '#prefix'        => '<strong>' . t('Block Edit Links:') . '</strong>',
   );
 
-  $form['themedev']['basic_rebuild_registry'] = array(
+  $form['themedev']['aeste_drupal_rebuild_registry'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Rebuild theme registry on every page.'),
-    '#default_value' => $settings['basic_rebuild_registry'],
+    '#default_value' => $settings['aeste_drupal_rebuild_registry'],
     '#description'   => t('During theme development, it can be very useful to continuously <a href="!link">rebuild the theme registry</a>. WARNING: this is a huge performance penalty and must be turned off on production websites.', array('!link' => 'http://drupal.org/node/173880#theme-registry')),
     '#prefix'        => '<div id="div-basic-registry"><strong>' . t('Theme registry:') . '</strong>',
     '#suffix'        => '</div>',
@@ -50,7 +50,7 @@ function basic_settings($saved_settings, $subtheme_defaults = array()) {
 }
 
 
-function _basic_theme(&$existing, $type, $theme, $path) {
+function _aeste_drupal_theme(&$existing, $type, $theme, $path) {
   // Each theme has two possible preprocess functions that can act on a hook.
   // This function applies to every hook.
   $functions[0] = $theme . '_preprocess';
@@ -72,10 +72,10 @@ function _basic_theme(&$existing, $type, $theme, $path) {
 
   // Since we are rebuilding the theme registry and the theme settings' default
   // values may have changed, make sure they are saved in the database properly.
-  basic_theme_get_default_settings($theme);
+  aeste_drupal_theme_get_default_settings($theme);
 
   // If we are auto-rebuilding the theme registry, warn about feature.
-  if (theme_get_setting('basic_rebuild_registry')) {
+  if (theme_get_setting('aeste_drupal_rebuild_registry')) {
     drupal_set_message(t('The theme registry has been rebuilt. <a href="!link">Turn off</a> this feature on production websites.', array('!link' => base_path() . 'admin/build/themes/settings/' . $GLOBALS['theme'])), 'warning');
   }
 
@@ -84,7 +84,7 @@ function _basic_theme(&$existing, $type, $theme, $path) {
 }
 
 
-function basic_theme_get_default_settings($theme) {
+function aeste_drupal_theme_get_default_settings($theme) {
   $themes = list_themes();
 
   // Get the default values from the .info file.
