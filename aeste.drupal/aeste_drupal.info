@@ -23,6 +23,7 @@ features[] = favicon
 features[] = primary_links
 features[] = secondary_links
 
+stylesheets[all][] = css/grid.css
 stylesheets[all][] = css/default.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
