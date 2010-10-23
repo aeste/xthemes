@@ -6,10 +6,12 @@ VERSION: 1.6.1
 AUTHOR: <a href="http://andy.wordpress.com/">Andy Skelton</a> &amp; <a href="http://www.plaintxt.org/">Scott Allan Wallick</a>
 AUTHOR URI:
 TAGS: sandbox, microformats, hcard, hatom, xoxo, widgets, blank slate, starter theme, minimalist, developer
-*/
+`*/
 
 /* Two-column with sidebar on left from the /examples/ folder  */
-@import url('examples/2c-l.css');
+@import url('css/grid.css');
+
+body { font-family: 'Droid Sans', arial, serif; }
 
 /* Just some example content */
 div.skip-link {
