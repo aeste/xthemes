@@ -19,7 +19,7 @@ ul.hnav>li>a { height:16px;margin:24px 0;display:inline-block;font-size:small; }
 
 div#header ul.hnav>li>a { color:#ccc; }
 
-div#footer { background:#666; }
+div#footer { background:#ccc; }
 div#footer>div.row { padding:8px 0;height:80px; }
 
 div#copyright  { background:#333; }

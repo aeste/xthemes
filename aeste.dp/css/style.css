@@ -3,7 +3,7 @@ body {
   margin: 0;
   /* Setting up font size, leading and font family
    * http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
-  font: 13px/1.5em 'Droid Sans', arial, serif;
+  font: 11pt 'Droid Sans', arial, serif;
   letter-spacing: 0.03em; }
 
 /* Links */
