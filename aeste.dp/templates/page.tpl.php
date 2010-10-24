@@ -44,7 +44,7 @@
 
     <!-- ______________________ MAIN _______________________ -->
 
-    <div id="main" class="clearfix">
+    <div id="main" class="clearfix row">
     
       <div id="content">
         <div id="content-inner" class="inner column center">
