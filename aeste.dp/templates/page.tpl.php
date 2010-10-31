@@ -1,45 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
-  <head>
-    
-    <title><?php print $head_title; ?></title>
-    <?php print $head; ?>
-<link href='http://fonts.googleapis.com/css?family=Molengo&subset=latin' rel='stylesheet' type='text/css'>
-    <?php print $styles; ?>
-    <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
-    <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
-    <?php print $scripts; ?>
-  </head>
+   <head>  
+   <title><?php print $head_title; ?></title>
+   <?php print $head; ?>
+   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+   <?php print $styles; ?>
+   <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
+   <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
+   <?php print $scripts; ?>
+   </head>
+   <body class="<?php print $body_classes; ?>">
+   <div id="skip"><a href="#content"><?php print t('Skip to Content'); ?></a> <a href="#navigation"><?php print t('Skip to Navigation'); ?></a></div>  
+   <div id="page#">
+   
+   <!-- ______________________ HEADER _______________________ -->
 
-  <body class="<?php print $body_classes; ?>">
-    <div id="skip"><a href="#content"><?php print t('Skip to Content'); ?></a> <a href="#navigation"><?php print t('Skip to Navigation'); ?></a></div>  
-    <div id="page">
-
-    <!-- ______________________ HEADER _______________________ -->
-
-    <div id="header">
-
-      <div id="logo-title">
-	
-        <?php if (!empty($logo)): ?>
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
-          </a>
-        <?php endif; ?>
-
-        <div id="name-and-slogan">
-          <?php if (!empty($site_name)): ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-          <?php if (!empty($site_slogan)): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /name-and-slogan -->
-
-      </div> <!-- /logo-title -->
+   <div id="header">
+   <div id="logo-title" class="row">	
+   <div class="column grid_3">   
+   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="http://files.aeste.net/img/text5019_150x48.png" alt="<?php print t('Home'); ?>"/></a>
+   </div>
+   <div id="name-and-slogan" class="column grid_9">
+    <ul class="hnav">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Wiki</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Files</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+   </div> <!-- /name-and-slogan -->
+   </div> <!-- /logo-title -->
 
       <?php if ($header): ?>
         <div id="header-region">
@@ -53,7 +44,7 @@
 
     <!-- ______________________ MAIN _______________________ -->
 
-    <div id="main" class="clearfix">
+    <div id="main" class="clearfix row">
     
       <div id="content">
         <div id="content-inner" class="inner column center">
@@ -131,11 +122,15 @@
       <!-- ______________________ FOOTER _______________________ -->
 
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>
-        <div id="footer">
+        <div id="footer"><div class="row">
           <?php print $footer_message; ?>
           <?php print $footer_block; ?>
-        </div> <!-- /footer -->
+        </div></div> <!-- /footer -->
       <?php endif; ?>
+  <div id="copyright">
+  <div class="row">
+  Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd. All Rights Reserved.
+  </div></div>
 
     </div> <!-- /page -->
     <?php print $closure; ?>

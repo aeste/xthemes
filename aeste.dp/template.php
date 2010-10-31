@@ -1,12 +1,12 @@
 <?php
     
 // Auto-rebuild the theme registry during theme development.
-if (theme_get_setting('aeste_drupal_rebuild_registry')) {
+if (theme_get_setting('aeste_dp_rebuild_registry')) {
   drupal_rebuild_theme_registry();
 }
 
 // Add Zen Tabs styles
-if (theme_get_setting('aeste_drupal_zen_tabs')) {
+if (theme_get_setting('aeste_dp_zen_tabs')) {
   drupal_add_css( drupal_get_path('theme', 'basic') .'/css/tabs.css', 'theme', 'screen');
 }
 
@@ -19,7 +19,7 @@ if (theme_get_setting('aeste_drupal_zen_tabs')) {
  *	  The name of the theme function being called ("page" in this case.)
  */
 
-function aeste_drupal_preprocess_page(&$vars, $hook) {
+function aeste_dp_preprocess_page(&$vars, $hook) {
 
   // Don't display empty help from node_help().
   if ($vars['help'] == "<div class=\"help\"><p></p>\n</div>") {
@@ -32,7 +32,7 @@ function aeste_drupal_preprocess_page(&$vars, $hook) {
   if (user_access('administer blocks')) {
 	  $body_classes[] = 'admin';
 	}
-	if (theme_get_setting('aeste_drupal_wireframe')) {
+	if (theme_get_setting('aeste_dp_wireframe')) {
     $body_classes[] = 'with-wireframes'; // Optionally add the wireframes style.
   }
   if (!empty($vars['primary_links']) or !empty($vars['secondary_links'])) {
@@ -50,8 +50,8 @@ function aeste_drupal_preprocess_page(&$vars, $hook) {
     // Add unique classes for each page and website section
     $path = drupal_get_path_alias($_GET['q']);
     list($section, ) = explode('/', $path, 2);
-    $body_classes[] = aeste_drupal_id_safe('page-'. $path);
-    $body_classes[] = aeste_drupal_id_safe('section-'. $section);
+    $body_classes[] = aeste_dp_id_safe('page-'. $path);
+    $body_classes[] = aeste_dp_id_safe('section-'. $section);
 
     if (arg(0) == 'node') {
       if (arg(1) == 'add') {
@@ -120,7 +120,7 @@ function aeste_drupal_preprocess_page(&$vars, $hook) {
  *	  The name of the theme function being called ("node" in this case.)
  */
 
-function aeste_drupal_preprocess_node(&$vars, $hook) {
+function aeste_dp_preprocess_node(&$vars, $hook) {
   // Special classes for nodes
   $classes = array('node');
   if ($vars['sticky']) {
@@ -146,7 +146,7 @@ function aeste_drupal_preprocess_node(&$vars, $hook) {
   $classes[] = 'clearfix';
   
   // Class for node type: "node-type-page", "node-type-story", "node-type-my-custom-type", etc.
-  $classes[] = aeste_drupal_id_safe('node-type-' . $vars['type']);
+  $classes[] = aeste_dp_id_safe('node-type-' . $vars['type']);
   $vars['classes'] = implode(' ', $classes); // Concatenate with spaces
 }
 
@@ -162,14 +162,14 @@ function aeste_drupal_preprocess_node(&$vars, $hook) {
  *   The name of the theme function being called ("block" in this case.)
  */ 
 
-function aeste_drupal_preprocess_block(&$vars, $hook) {
+function aeste_dp_preprocess_block(&$vars, $hook) {
     $block = $vars['block'];
 
     // special block classes
     $classes = array('block');
-    $classes[] = aeste_drupal_id_safe('block-' . $vars['block']->module);
-    $classes[] = aeste_drupal_id_safe('block-' . $vars['block']->region);
-    $classes[] = aeste_drupal_id_safe('block-id-' . $vars['block']->bid);
+    $classes[] = aeste_dp_id_safe('block-' . $vars['block']->module);
+    $classes[] = aeste_dp_id_safe('block-' . $vars['block']->region);
+    $classes[] = aeste_dp_id_safe('block-id-' . $vars['block']->bid);
     $classes[] = 'clearfix';
     
     // support for Skinr Module
@@ -179,7 +179,7 @@ function aeste_drupal_preprocess_block(&$vars, $hook) {
     
     $vars['block_classes'] = implode(' ', $classes); // Concatenate with spaces
 
-    if (theme_get_setting('aeste_drupal_block_editing') && user_access('administer blocks')) {
+    if (theme_get_setting('aeste_dp_block_editing') && user_access('administer blocks')) {
         // Display 'edit block' for custom blocks.
         if ($block->module == 'block') {
           $edit_links[] = l('<span>' . t('edit block') . '</span>', 'admin/build/block/configure/' . $block->module . '/' . $block->delta,
@@ -248,7 +248,7 @@ function aeste_drupal_preprocess_block(&$vars, $hook) {
  *    The name of the template being rendered ("comment" in this case.)
  */
 
-function aeste_drupal_preprocess_comment(&$vars, $hook) {
+function aeste_dp_preprocess_comment(&$vars, $hook) {
   // Add an "unpublished" flag.
   $vars['unpublished'] = ($vars['comment']->status == COMMENT_NOT_PUBLISHED);
 
@@ -297,7 +297,7 @@ function aeste_drupal_preprocess_comment(&$vars, $hook) {
  * 	  string The rendered menu item.
  */ 	
 
-function aeste_drupal_menu_item_link($link) {
+function aeste_dp_menu_item_link($link) {
   if (empty($link['localized_options'])) {
     $link['localized_options'] = array();
   }
@@ -316,7 +316,7 @@ function aeste_drupal_menu_item_link($link) {
  *  Duplicate of theme_menu_local_tasks() but adds clear-block to tabs.
  */
 
-function aeste_drupal_menu_local_tasks() {
+function aeste_dp_menu_local_tasks() {
   $output = '';
   if ($primary = menu_primary_local_tasks()) {
     if(menu_secondary_local_tasks()) {
@@ -336,7 +336,7 @@ function aeste_drupal_menu_local_tasks() {
  * 	Add custom classes to menu item
  */	
 	
-function aeste_drupal_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
+function aeste_dp_menu_item($link, $has_children, $menu = '', $in_active_trail = FALSE, $extra_class = NULL) {
   $class = ($menu ? 'expanded' : ($has_children ? 'collapsed' : 'leaf'));
   if (!empty($extra_class)) {
     $class .= ' '. $extra_class;
@@ -345,7 +345,7 @@ function aeste_drupal_menu_item($link, $has_children, $menu = '', $in_active_tra
     $class .= ' active-trail';
   }
 #New line added to get unique classes for each menu item
-  $css_class = aeste_drupal_id_safe(str_replace(' ', '_', strip_tags($link)));
+  $css_class = aeste_dp_id_safe(str_replace(' ', '_', strip_tags($link)));
   return '<li class="'. $class . ' ' . $css_class . '">' . $link . $menu ."</li>\n";
 }
 
@@ -365,7 +365,7 @@ function aeste_drupal_menu_item($link, $has_children, $menu = '', $in_active_tra
  *	  The converted string
  */	
 
-function aeste_drupal_id_safe($string) {
+function aeste_dp_id_safe($string) {
   // Replace with dashes anything that isn't A-Z, numbers, dashes, or underscores.
   $string = strtolower(preg_replace('/[^a-zA-Z0-9_-]+/', '-', $string));
   // If the first character is not a-z, add 'n' in front.
@@ -380,7 +380,7 @@ function aeste_drupal_id_safe($string) {
  *	Alow you to customize the breadcrumb markup
  */
 
-function aeste_drupal_breadcrumb($breadcrumb) {
+function aeste_dp_breadcrumb($breadcrumb) {
   if (!empty($breadcrumb)) {
     return '<div class="breadcrumb">'. implode(' » ', $breadcrumb) .'</div>';
   }
