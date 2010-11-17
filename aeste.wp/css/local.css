@@ -1,45 +1,77 @@
-body { 
-       font-family: 'Droid Sans', arial, serif;
-       font-size:11pt;
-       background:#fff;
-}
+body {
+  font-family: 'Droid Sans', arial, serif;
+  font-size: 11pt;
+  background: #eeeeee; }
 
-a { border:0;text-decoration:none;color:#a43; }
+a {
+  border: 0;
+  text-decoration: none;
+  color: #c10; }
 
-/* header */
+.wline {
+  background: white;
+  height: 25px; }
 
-div#header a>img { border:0;margin:39px 34px;padding:0; }
-div#header>div.row { background:#fff;height:125px; }
+.hline {
+  background: url("../png/hline.png");
+  height: 30px; }
 
+#wrapper {
+  background: #ffffff;
+  width: 1000px;
+  margin: auto; }
 
-ul.hnav { list-style:none;padding:0;margin:0;float:right; }
-ul.hnav>li { padding:0 16px;display:inline-block; }
-ul.hnav>li:last-child { padding:0 0 0 32px; }
-ul.hnav>li>a { height:16px;margin:24px 0;display:inline-block;font-size:small; }
+#header .row {
+  background: white;
+  height: 125px; }
 
-div#header ul.hnav>li>a { color:#ccc; }
+#logo {
+  border: 0;
+  margin: 39px 34px;
+  padding: 0; }
 
-div#redbox { background:url("../png/rback.png");color:#fff; }
-div#redbox a { color:#fff; }
-div#dred, div#lred { height:240px; }
+#redbox {
+  background: url("../png/rback.png");
+  color: white; }
+  #redbox a {
+    color: white; }
 
+#lred, #rred {
+  height: 240px; }
 
-/* content */
+#container {
+  background: url("../png/wback.png"); }
 
-div#container { background:url("../png/wback.png");margin-top:0 !important; }
-div#sbar {            
-           border-right:1px;
-           }
+.sidebar {
+  font-size: small; }
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-weight: bold; }
+    .sidebar ul li {
+      font-weight: normal;
+      list-style: none;
+      margin: 0 20px;
+      border-top: 1px solid #ddd;
+      padding: 0; }
+      .sidebar ul li a {
+        width: auto;
+        text-align: right;
+        display: block;
+        padding: 5px;
+        text-decoration: none; }
 
+#footer {
+  background: url("../png/wback.png");
+  font-size: x-small;
+  color: #aaa;
+  margin-bottom: 30px;
+  padding-bottom: 30px; }
 
-/* footer */
+#addr {
+  text-align: right;
+  padding: 20px; }
 
-div#footer { background:url("../png/wback.png");font-size:x-small;color:#aaa;margin-bottom:30px; }
-div#lfoot { }
-
-div#addr { text-align:right;padding:20px; }
-div#copyright { padding:20px; }
-
-/* misc */
-div.wline { background:#fff;height:25px; }
-div.hline { background:url("../png/hline.png");height:30px; }
+#copyright {
+  padding: 20px; }
