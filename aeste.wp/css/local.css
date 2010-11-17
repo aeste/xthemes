@@ -1,7 +1,7 @@
 body { 
        font-family: 'Droid Sans', arial, serif;
        font-size:11pt;
-       background:#eee;
+       background:#fff;
 }
 
 a { border:0;text-decoration:none;color:#a43; }
@@ -21,7 +21,7 @@ div#header ul.hnav>li>a { color:#ccc; }
 
 div#redbox { background:url("../png/rback.png");color:#fff; }
 div#redbox a { color:#fff; }
-div#dred, div#lred { height:230px; }
+div#dred, div#lred { height:240px; }
 
 
 /* content */
@@ -34,11 +34,12 @@ div#sbar {
 
 /* footer */
 
-div#footer { background:url("../png/wback.png");font-size:x-small;color:#aaa; }
-div#lfoot { height:100px; }
+div#footer { background:url("../png/wback.png");font-size:x-small;color:#aaa;margin-bottom:30px; }
+div#lfoot { }
 
-div#addr { text-align:right;padding:15px 30px; }
-div#copyright { padding:15px 30px; }
+div#addr { text-align:right;padding:20px; }
+div#copyright { padding:20px; }
 
 /* misc */
+div.wline { background:#fff;height:25px; }
 div.hline { background:url("../png/hline.png");height:30px; }

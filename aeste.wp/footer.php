@@ -1,4 +1,4 @@
-<div class="hline row">&nbsp;</div>
+<div class="hline row"></div>
 <div id="footer" class="row">
    <div id="lfoot" class="column grid_3">
    <div id="addr" class="">
