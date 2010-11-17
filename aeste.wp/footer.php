@@ -2,11 +2,11 @@
 <div id="footer" class="row">
    <div id="lfoot" class="column grid_3">
    <div id="addr" class="">
-   <b>Aeste Works (M) Sdn Bhd</b><br/>
+   <b style="font-size:small">Aeste Works (M) Sdn Bhd</b><br/>
    6-3-6 Queen's Avenue<br/>
    Jalan Bayam, Cheras<br/>
    55100 Kuala Lumpur, Malaysia<br/>
-   info@aeste.my<br/>
+   info&#64;aeste.my<br/>
    </div>
    </div><!--lfoot-->
 

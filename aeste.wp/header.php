@@ -12,25 +12,17 @@
     </head>
     <body class="<?php sandbox_body_class() ?>">
     <div id="wrapper" class="hfeed">
-    <div id="header"><div class="row">
-    <div id="blog-title" class="column grid_3">
-    <a href="<?=bloginfo('home')?>/" title="<?=wp_specialchars(get_bloginfo('name'),1)?>" rel="home">
-    <img src="<?=bloginfo('template_directory')?>/png/logo.png"></a></div>
-    <div id="blog-banner" class="column grid_9">
 
-    <ul class="hnav">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Wiki</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Files</a></li>
-    <li><a href="#">Contact</a></li>
-    </ul>
+    <div id="header"><div class="row">
+    <div class="column grid_3">
+    <a href="<?=bloginfo('home')?>/" title="<?=wp_specialchars(get_bloginfo('name'),1)?>" rel="home">
+    <img id="logo" src="<?=bloginfo('template_directory')?>/png/logo.png"></a></div>
+    <div class="column grid_9">
 
     </div>
     </div></div>
     <div id="redbox" class="row">
-    <div id="dred" class="column grid_3">
+    <div id="lred" class="column grid_3">
 
     <ul class="rnav">
     <li><a href="#">About</a></li>
@@ -39,9 +31,8 @@
     </ul>
 
     </div>
-    <div class="column grid_9">
+    <div id="rred" class="column grid_9">
     The world's smallest and fastest 32-bit multi-threaded cores.
     </div>
-    </div><!--lred-->
     </div><!--redbox-->
 <div class="row wline">&nbsp;</div>
