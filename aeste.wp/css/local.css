@@ -1,16 +1,16 @@
 body { 
        font-family: 'Droid Sans', arial, serif;
        font-size:11pt;
-       padding:0;
-       margin:0;
-       background:#fff;
+       background:#eee;
 }
 
-a { border:0;text-decoration:none; }
+a { border:0;text-decoration:none;color:#a43; }
 
-div#header a>img { border:0;margin:8px 0; }
-div#header>div.row { padding:8px 0;height:64px; }
-div#header { background:#333; }
+/* header */
+
+div#header a>img { border:0;margin:39px 34px;padding:0; }
+div#header>div.row { background:#fff;height:125px; }
+
 
 ul.hnav { list-style:none;padding:0;margin:0;float:right; }
 ul.hnav>li { padding:0 16px;display:inline-block; }
@@ -19,8 +19,26 @@ ul.hnav>li>a { height:16px;margin:24px 0;display:inline-block;font-size:small; }
 
 div#header ul.hnav>li>a { color:#ccc; }
 
-div#footer { background:#ccc; }
-div#footer>div.row { padding:8px 0;height:80px; }
+div#redbox { background:url("../png/rback.png");color:#fff; }
+div#redbox a { color:#fff; }
+div#dred, div#lred { height:230px; }
 
-div#copyright  { background:#333; }
-div#copyright>div.row { padding:8px 0;font-size:x-small;color:#ccc; }
+
+/* content */
+
+div#container { background:url("../png/wback.png");margin-top:0 !important; }
+div#sbar {            
+           border-right:1px;
+           }
+
+
+/* footer */
+
+div#footer { background:url("../png/wback.png");font-size:x-small;color:#aaa; }
+div#lfoot { height:100px; }
+
+div#addr { text-align:right;padding:15px 30px; }
+div#copyright { padding:15px 30px; }
+
+/* misc */
+div.hline { background:url("../png/hline.png");height:30px; }
