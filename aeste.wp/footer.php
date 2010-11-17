@@ -1,12 +1,33 @@
-<div id="footer"><div class="row">
-  <span id="generator-link"><a href="http://wordpress.org/" title="<?php _e( 'WordPress', 'sandbox' ) ?>" rel="generator"><?php _e( 'WordPress', 'sandbox' ) ?></a></span>
-  <span class="meta-sep">|</span>
-  <span id="theme-link"><a href="http://www.plaintxt.org/themes/sandbox/" title="<?php _e( 'Sandbox theme for WordPress', 'sandbox' ) ?>" rel="designer"><?php _e( 'Sandbox', 'sandbox' ) ?></a></span>
-  </div></div>
+<div class="hline row"></div>
+<div id="footer" class="row">
+   <div id="lfoot" class="column grid_3">
+   <div id="addr" class="">
+   <b>Aeste Works (M) Sdn Bhd</b><br/>
+   6-3-6 Queen's Avenue<br/>
+   Jalan Bayam, Cheras<br/>
+   55100 Kuala Lumpur, Malaysia<br/>
+   info&#64;aeste.my<br/>
+   </div>
+   </div><!--lfoot-->
+
+<div id="rfoot" class="column grid_9">
+    <ul class="nav">
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    </ul>
+
   <div id="copyright">
-  <div class="row">
-  Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd. All Rights Reserved.
-  </div></div>
+Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>
+All Rights Reserved.
+  </div>
+</div><!--rfoot-->
+
+  </div>
+<div class="wline row"></div>
   </div><!-- #wrapper .hfeed -->
   <?php wp_footer() ?>
   </body>

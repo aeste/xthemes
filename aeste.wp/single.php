@@ -1,6 +1,8 @@
 <?php get_header() ?>
 
-	<div id="container">
+	<div id="container" class="row">
+<?php get_sidebar() ?>
+  <div class="column grid_9">
 		<div id="content">
 
 <?php the_post() ?>
@@ -52,7 +54,7 @@
 <?php comments_template() ?>
 
 		</div><!-- #content -->
+  </div>
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
 <?php get_footer() ?>

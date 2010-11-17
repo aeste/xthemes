@@ -1,9 +1,11 @@
 <?php get_header() ?>
 
   <div id="container" class="row">
-  <div id="content" class="column">
 
-  <div id="nav-above" class="navigation grid_12">
+<?php get_sidebar() ?>
+  <div class="column grid_9">
+  <div id="content">
+  <div id="nav-above" class="navigation">
   <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
   <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
   </div>
@@ -37,9 +39,8 @@
 				<div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
 				<div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
 			</div>
-
+                   </div>
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
 <?php get_footer() ?>
