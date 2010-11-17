@@ -1,0 +1,96 @@
+// test
+
+!family = "'Droid Sans', arial, serif"
+!fff = #ffffff
+!red = #ff1100
+!px20 = 20px
+
+body
+  :font-family= !family
+  :font-size 11pt
+  :background #eeeeee
+
+a
+  :border 0
+  :text-decoration none
+  :color #c10
+
+.wline
+  :background= !fff
+  :height 25px
+  
+.hline
+  :background url("../png/hline.png")
+  :height 30px
+
+#wrapper
+  :background #ffffff
+  :width 1000px
+  :margin auto
+
+// Headers
+
+#header
+  .row
+    :background= !fff
+    :height 125px
+
+#logo
+  :border 0
+  :margin 39px 34px
+  :padding 0
+    
+#redbox
+  :background url("../png/rback.png")
+  :color= !fff
+  a
+    :color= !fff
+
+#lred, #rred
+  :height 240px
+
+// Content
+
+#container
+  :background url("../png/wback.png")
+
+// Sidebar
+.sidebar
+  :font-size small
+  ul  
+    :margin 0
+    :padding 0
+    :border none
+    :font-weight bold
+    li
+      :font-weight normal
+      :list-style none
+      :margin= 0 !px20
+      :border-top 1px solid #ddd
+      :padding 0
+      a
+        :width auto
+        :text-align right
+        :display block
+        :padding 5px
+        :text-decoration none    
+
+
+// Footer
+
+#footer
+  :background url("../png/wback.png")
+  :font-size x-small
+  :color #aaa
+  :margin-bottom 30px
+  :padding-bottom 30px
+
+#addr
+  :text-align right
+  :padding= !px20
+
+#copyright
+  :padding= !px20
+
+
+    
