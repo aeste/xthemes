@@ -1,6 +1,6 @@
 // test
 
-!family = "'Droid Sans', arial, serif"
+!family = "'PT Sans', arial, serif"
 !fff = #ffffff
 !red = #ff1100
 !px20 = 20px
@@ -54,9 +54,14 @@ a
 #container
   :background url("../png/wback.png")
 
+#content
+  :padding-left= !px20
+
 // Sidebar
 .sidebar
-  :font-size small
+  :font-size small  
+  li
+    :list-style none
   ul  
     :margin 0
     :padding 0
@@ -65,7 +70,7 @@ a
     li
       :font-weight normal
       :list-style none
-      :margin= 0 !px20
+      :margin= 0 !px20 0 0
       :border-top 1px solid #ddd
       :padding 0
       a
@@ -74,7 +79,9 @@ a
         :display block
         :padding 5px
         :text-decoration none    
-
+        &:hover
+          :color #f10
+          :background #eee
 
 // Footer
 
@@ -82,8 +89,6 @@ a
   :background url("../png/wback.png")
   :font-size x-small
   :color #aaa
-  :margin-bottom 30px
-  :padding-bottom 30px
 
 #addr
   :text-align right

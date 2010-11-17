@@ -17,7 +17,7 @@
 </div><!--rfoot-->
 
   </div>
-</div>
+<div class="wline row"></div>
   </div><!-- #wrapper .hfeed -->
   <?php wp_footer() ?>
   </body>
