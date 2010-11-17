@@ -1,0 +1,13 @@
+/*
+THEME NAME: Aeste
+THEME URI: http://github.com/aeste/xthemes
+DESCRIPTION: Cross CMS themes for Drupal, Wordpress, Mediawiki.
+VERSION: 10.11
+AUTHOR: Shawn Tan
+AUTHOR URI: https://github.com/sybreon
+TAGS: minimalist
+*/
+
+/* Two-column with sidebar on left from the /examples/ folder  */
+@import url('css/grid.css');
+@import url('css/local.css');

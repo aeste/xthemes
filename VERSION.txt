@@ -1,0 +1,4 @@
+Release a-2010-11-17
+====================
+
+First alpha release of a wordpress theme.
