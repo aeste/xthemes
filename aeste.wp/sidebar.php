@@ -26,9 +26,6 @@
 			</li>
 <?php endif; // end primary sidebar widgets  ?>
 		</ul>
-	</div><!-- #primary .sidebar -->
-
-	<div id="secondary" class="sidebar column grid_3">
 		<ul class="xoxo">
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : // begin secondary sidebar widgets ?>
 			<li id="search">

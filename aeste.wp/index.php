@@ -1,7 +1,10 @@
 <?php get_header() ?>
 
   <div id="container" class="row">
-  <div id="content" class="column">
+
+<?php get_sidebar() ?>
+
+  <div id="content" class="column grid_9">
 
   <div id="nav-above" class="navigation grid_12">
   <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
@@ -41,5 +44,4 @@
 		</div><!-- #content -->
 	</div><!-- #container -->
 
-<?php get_sidebar() ?>
 <?php get_footer() ?>
