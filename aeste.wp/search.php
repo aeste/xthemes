@@ -1,6 +1,7 @@
 <?php get_header() ?>
 
-	<div id="container">
+	<div id="container" class="row">
+<?php get_sidebar() ?><div class="column grid_9">
 		<div id="content">
 
 <?php if ( have_posts() ) : ?>
@@ -62,6 +63,5 @@
 
 		</div><!-- #content -->
 	</div><!-- #container -->
-
-<?php get_sidebar() ?>
+</div>
 <?php get_footer() ?>
