@@ -1,20 +1,21 @@
 // test
 
 !family = "'PT Sans', arial, serif"
-!fff = #ffffff
-!red = #ff1100
+!fff = #fff
+!f00 = #f00
+!c00 = #c00
 !px20 = 20px
-!border = "1px dotted #ddd"
+!border = "1px dotted #ccc"
 
 body
   :font-family= !family
   :font-size 11pt
-  :background #eeeeee
+  :background #eee
 
 a
   :border 0
   :text-decoration none
-  :color #c10
+  :color= !c00
 
 .wline
   :background= !fff
@@ -25,7 +26,7 @@ a
   :height 30px
 
 #wrapper
-  :background #ffffff
+  :background= !fff
   :width 1000px
   :margin auto
 
@@ -52,7 +53,7 @@ a
         :border none
       a
         &:hover
-          :color= !red
+          :color= !f00
 
 #logo
   :border 0
@@ -89,7 +90,7 @@ a
       a
         :padding 10px
         &:hover
-          :color= !red
+          :color= !f00
 
 
 #lred, #rred
@@ -133,7 +134,7 @@ a
         :padding 5px
         :text-decoration none    
         &:hover
-          :color= !red
+          :color= !f00
           :background #eee
 
 // Footer
@@ -161,7 +162,7 @@ a
         :padding 5px
         :font-weight bold
         &:hover
-          :color= !red
+          :color= !f00
 
 #addr
   :text-align right
