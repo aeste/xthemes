@@ -20,16 +20,22 @@
     <img id="logo" src="<?=bloginfo('template_directory')?>/png/logo.png"></a></div>
     <div class="column grid_9">
 
+    <ul class="nav">
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    </ul>
+
     </div>
     </div></div>
     <div id="redbox" class="row">
     <div id="lred" class="column grid_3">
 
-    <ul class="rnav">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Wiki</a></li>
-    </ul>
+    <div style="font-size:small">
+    <b>ELEGANCE</b>
+    <p>There is an ineffable quality to some technology, described by its creators as concinnitous, or technically sweet, or a nice hack - signs that it was made with great care by one who was not merely motivated but inspired.</p>
+    The Diamond Age
+    </div>
 
     </div>
     <div id="rred" class="column grid_9">

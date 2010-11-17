@@ -34,11 +34,31 @@ a
   .row
     :background= !fff
     :height 125px
+  ul.nav
+    :list-style none
+    :float right
+    :margin 10px 0
+    li
+      :padding 0
+      :margin 0
+      :display table-cell
+      :vertical-align middle
+      :height 105px
+      :min-width 65px
+      :border-left 1px dashed #eee
+      :text-align center
+      &:first-child
+        :border none
+      a
+        &:hover
+          :color= !red
 
 #logo
   :border 0
   :margin 39px 34px
   :padding 0
+
+// Redbox
     
 #redbox
   :background url("../png/rback.png")
@@ -57,7 +77,13 @@ a
 #content
   :padding-left= !px20
 
-// Sidebar
+.navigation
+  :padding 10px 0
+  .nav-next
+    :float right
+  .nav-previous
+    :float left
+
 .sidebar
   :font-size small  
   li
@@ -71,7 +97,7 @@ a
       :font-weight normal
       :list-style none
       :margin= 0 !px20 0 0
-      :border-top 1px solid #ddd
+      :border-top 1px dashed #ddd
       :padding 0
       a
         :width auto
@@ -80,7 +106,7 @@ a
         :padding 5px
         :text-decoration none    
         &:hover
-          :color #f10
+          :color= !red
           :background #eee
 
 // Footer
@@ -93,6 +119,8 @@ a
 #addr
   :text-align right
   :padding= !px20
+  b
+    :font-size small
 
 #copyright
   :padding= !px20
