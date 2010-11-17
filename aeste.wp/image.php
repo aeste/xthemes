@@ -1,22 +1,18 @@
 <?php get_header() ?>
-
-	<div id="container">
-		<div id="content">
-
-<?php the_post() ?>
-
-			<h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'sandbox' ), wp_specialchars( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
-
-			<div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-				<h3 class="entry-title"><?php the_title() ?></h3>
-				<div class="entry-content">
-					<div class="entry-attachment"><a href="<?php echo wp_get_attachment_url($post->ID); ?>" title="<?php echo wp_specialchars( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></div>
-					<div class="entry-caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></div>
-<?php the_content() ?>
-
-				</div>
-
-				<div class="entry-meta">
+  <div id="container" class="row">
+  <?php get_sidebar() ?>
+  <div class="column grid_9">
+  <div id="content">
+  <?php the_post() ?>
+  <h2 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'sandbox' ), wp_specialchars( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><?php echo get_the_title($post->post_parent) ?></a></h2>
+  <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
+  <h3 class="entry-title"><?php the_title() ?></h3>
+  <div class="entry-content">
+  <div class="entry-attachment"><a href="<?php echo wp_get_attachment_url($post->ID); ?>" title="<?php echo wp_specialchars( get_the_title($post->ID), 1 ) ?>" rel="attachment"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></div>
+  <div class="entry-caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></div>
+  <?php the_content() ?>
+</div>
+  <div class="entry-meta">
 					<?php printf( __( 'Posted by %1$s on <abbr class="published" title="%2$sT%3$s">%4$s at %5$s</abbr>. Bookmark the <a href="%6$s" title="Permalink to %7$s" rel="bookmark">permalink</a>. Follow any comments here with the <a href="%8$s" title="Comments RSS to %7$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'sandbox' ),
 						'<span class="author vcard"><a class="url fn n" href="' . get_author_link( false, $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( __( 'View all posts by %s', 'sandbox' ), $authordata->display_name ) . '">' . get_the_author() . '</a></span>',
 						get_the_time('Y-m-d'),
@@ -49,7 +45,6 @@
 <?php comments_template() ?>
 
 		</div><!-- #content -->
+  </div>
 	</div><!-- #container -->
-
-<?php get_sidebar() ?>
 <?php get_footer() ?>
