@@ -38,13 +38,13 @@ a
   ul.nav
     :list-style none
     :float right
-    :margin 10px 0
+    :margin 30px 0
     li
       :padding 0
       :margin 0
       :display table-cell
       :vertical-align middle
-      :height 105px
+      :height 65px
       :min-width 65px
       :border-left= !border
       :text-align center
@@ -59,6 +59,15 @@ a
   :margin 39px 34px
   :padding 0
 
+#quote
+  :margin 20px 10px
+
+#banner
+  :margin 0
+  :padding 0
+  :width 720px
+  :height 240px
+
 // Redbox
     
 #redbox
@@ -66,9 +75,26 @@ a
   :color= !fff
   a
     :color= !fff
+  ul.nav
+    :display table-cell
+    :list-style none
+    :vertical-align middle
+    :text-align center
+    :padding 0
+    :margin auto
+    li
+      :padding 10px 0
+      :margin 0 20px   
+      :font-size small
+      a
+        :padding 10px
+        &:hover
+          :color= !red
+
 
 #lred, #rred
   :height 240px
+  :display table
 
 // Content
 
@@ -133,6 +159,7 @@ a
         :border none
       a
         :padding 5px
+        :font-weight bold
         &:hover
           :color= !red
 

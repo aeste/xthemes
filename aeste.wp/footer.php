@@ -21,7 +21,8 @@
     </ul>
 
   <div id="copyright">
-  Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd. All Rights Reserved.
+Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>
+All Rights Reserved.
   </div>
 </div><!--rfoot-->
 

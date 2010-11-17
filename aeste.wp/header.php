@@ -32,16 +32,10 @@
     </div></div>
     <div id="redbox" class="row">
     <div id="lred" class="column grid_3">
-
-    <div style="font-size:small">
-    <b>ELEGANCE</b>
-    <p>There is an ineffable quality to some technology, described by its creators as concinnitous, or technically sweet, or a nice hack - signs that it was made with great care by one who was not merely motivated but inspired.</p>
-    The Diamond Age
+    <img id="quote" src="<?=bloginfo('template_directory')?>/png/quote.png">
     </div>
 
-    </div>
-    <div id="rred" class="column grid_9">
-    The world's smallest and fastest 32-bit multi-threaded cores.
-    </div>
+    <img id="banner" src="<?=bloginfo('template_directory')?>/png/banner.png">
+   
     </div><!--redbox-->
 <div class="row wline">&nbsp;</div>
