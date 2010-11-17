@@ -4,6 +4,7 @@
 !fff = #ffffff
 !red = #ff1100
 !px20 = 20px
+!border = "1px dotted #ddd"
 
 body
   :font-family= !family
@@ -45,7 +46,7 @@ a
       :vertical-align middle
       :height 105px
       :min-width 65px
-      :border-left 1px dashed #eee
+      :border-left= !border
       :text-align center
       &:first-child
         :border none
@@ -97,7 +98,7 @@ a
       :font-weight normal
       :list-style none
       :margin= 0 !px20 0 0
-      :border-top 1px dashed #ddd
+      :border-top= !border
       :padding 0
       a
         :width auto
@@ -115,6 +116,25 @@ a
   :background url("../png/wback.png")
   :font-size x-small
   :color #aaa
+  ul.nav
+    :list-style none
+    :margin 0
+    :padding= !px20
+    :float right
+    li
+      :padding 0
+      :margin 0
+      :display table-cell
+      :vertical-align middle
+      :min-width 15px
+      :border-left= !border
+      :text-align center
+      &:first-child
+        :border none
+      a
+        :padding 5px
+        &:hover
+          :color= !red
 
 #addr
   :text-align right

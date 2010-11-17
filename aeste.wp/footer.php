@@ -11,6 +11,15 @@
    </div><!--lfoot-->
 
 <div id="rfoot" class="column grid_9">
+    <ul class="nav">
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    </ul>
+
   <div id="copyright">
   Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd. All Rights Reserved.
   </div>
