@@ -10,15 +10,17 @@
    </div>
    </div><!--lfoot-->
 <div id="rfoot" class="column grid_9">
+   <div class="row">
+   <div class="column grid_9">
     <ul class="nav">
     <li><a href="http://www.aeste.my/careers">Careers</a></li>
     <li><a href="http://www.aeste.my/donate">Contribute</a></li>
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
     </ul>
-
-  <div id="copyright">
-Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>
-All Rights Reserved.
+   </div>
+   <div id="copyright" class="column grid_9">
+   Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.
+   </div>
   </div>
 </div><!--rfoot-->
 
