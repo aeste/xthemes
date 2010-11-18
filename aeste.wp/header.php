@@ -4,6 +4,7 @@
    <title><?php wp_title( '-', true, 'right' ); echo wp_specialchars( get_bloginfo('name'), 1 ) ?>&nbsp;|&nbsp;<?=wp_specialchars(get_bloginfo('description'),1)?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
+    <link rel="shortcut icon" href="<?=bloginfo('template_directory')?>/ae.ico">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url') ?>" />
     <?php wp_head() // For plugins ?>
@@ -31,8 +32,8 @@
     </div></div>
     <div id="redbox" class="row">
     <div id="lred" class="column grid_3">
-    <img id="quote" src="<?=bloginfo('template_directory')?>/png/quote.png">
+    <img width="200" height="200" id="quote" src="<?=bloginfo('template_directory')?>/png/quote.png">
     </div>
-    <img id="banner" src="<?=bloginfo('template_directory')?>/png/banner.png">   
+    <img width="720" height="240" id="banner" src="<?=bloginfo('template_directory')?>/png/banner.png">   
     </div><!--redbox-->
 <div class="row wline">&nbsp;</div>
