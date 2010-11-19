@@ -14,8 +14,7 @@
     </head>
     <body class="<?php sandbox_body_class() ?>">
     <div id="wrapper" class="hfeed">
-
-    <div id="header"><div class="row">
+    <div id="header" class="row">
     <div class="column grid_3">
     <a href="<?=bloginfo('home')?>/" title="<?=wp_specialchars(get_bloginfo('name'),1)?>" rel="home">
     <img id="logo" src="<?=bloginfo('template_directory')?>/png/logo.png"></a></div>
@@ -28,7 +27,6 @@
     <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
 
-    </div>
     </div></div>
     <div id="redbox" class="row">
     <div id="lred" class="column grid_3">
