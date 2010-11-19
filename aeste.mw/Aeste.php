@@ -24,11 +24,11 @@ class SkinAeste extends SkinTemplate {
 	  $out->addLink(array('href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,bold&subset=latin',
 			      'rel' => 'stylesheet',
 			      'type' => 'text/css'));
+	  $out->addStyle('aeste/reset.css', 'screen');
 	  $out->addStyle('aeste/grid.css', 'screen');
 	  $out->addStyle('aeste/main.css', 'screen');
 	  $out->addMeta('http:X-UA-Compatible','IE=8');
 	}
-
 }
 
 
@@ -44,9 +44,9 @@ class AesteTemplate extends QuickTemplate {
     $this->html('headelement');
 ?>
 <div id="wrapper">
-   <div id="header"><div class="row">
+   <div id="header" class="row">
    <div class="column grid_3">
-    <a href="<?=htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="" rel="home"><img id="logo" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/logo.png'?>"></a>
+    <a href="<?=htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="AESTE" rel="home"><img id="logo" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/logo.png'?>"></a>
    </div>
    <div class="column grid_9">
     <ul class="nav">
@@ -57,19 +57,12 @@ class AesteTemplate extends QuickTemplate {
     </ul>
 
    </div>
-   </div></div><!--header-->
-
+   </div><!--header-->
    <div id="redbox" class="row">
-   <div id="lred" class="column grid_3">
-   <img width="200" height="200" id="quote" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/quote.png'?>">
-   </div>
-   <img width="720" height="240" id="banner" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/banner.png'?>">   
-   </div><!--redbox-->
+   <div id="lred" class="column grid_3"><img width="200" height="200" id="quote" src="<?=$this->data['stylepath'].'/'.$this->data['stylename']?>/quote.png"></div>
+   <img width="720" height="240" id="banner" src="<?=$this->data['stylepath'].'/'.$this->data['stylename']?>/banner.png"></div><!--redbox-->
    <div class="row wline"></div>
-   
-
-   <div id="container"><div class="row">
-   
+   <div id="container" class="row">   
    <div class="column grid_3 sidebar">
    <?
    foreach ($this->data['sidebar'] as $box => $cont) {
@@ -77,8 +70,7 @@ class AesteTemplate extends QuickTemplate {
     }
    ?>
    </div><!--sidebar-->
-
-   </div></div><!--container-->
+   </div><!--container-->
 
 <div class="hline row"></div>
 <div id="footer" class="row">
@@ -112,12 +104,9 @@ class AesteTemplate extends QuickTemplate {
 
   </div>
 <div class="wline row"></div>
-
 </div><!--wrapper-->
 
-<pre>
-				    <? print_r($this->data); ?>
-</pre>
+		      <pre><? //print_r($this->data); ?></pre>
 
 <?php $this->html('bottomscripts'); /* JS call to runBodyOnloadHook */ ?>
 <?php $this->html('reporttime') ?>
