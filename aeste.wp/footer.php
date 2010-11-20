@@ -2,7 +2,7 @@
 <div id="footer" class="row">
    <div id="lfoot" class="column grid_3">
    <div id="addr" class="">
-   <b>Aeste Works (M) S/B</b><br/>
+   <b>AESTE WORKS (M) SB</b><br/>
    6-3-6 Queens Avenue<br/>
    Jalan Bayam, Cheras<br/>
    55100 Kuala Lumpur, Malaysia<br/>
