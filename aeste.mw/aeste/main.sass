@@ -22,8 +22,13 @@ a
   :height 25px
   
 .hline
-  :background url("../png/backs.png")
+  :background url("backs.png")
   :height 30px
+
+h1
+  :font-size x-large
+h2
+  :font-size large
 
 #wrapper
   :background= !fff
@@ -73,8 +78,8 @@ a
 // Redbox
     
 #redbox
-  :height 240px
-  :background url("../png/backs.png")
+  :height 240px !important
+  :background url("backs.png")
   :background-position -960px
   :color= !fff
   a
@@ -102,12 +107,28 @@ a
 // Content
 
 #container
-  :background url("../png/backs.png")
+  :background url("backs.png")
   :background-position -1920px
 
 #content
   :padding-left= !px20
-
+  :line-height 1.5
+  :color #333
+  .post, .comments
+    :clear both
+    :margin-bottom 30px
+    .entry-meta
+      :color #aaa
+  p
+    :margin-bottom= !px20
+  .printfooter 
+    :display none
+  .editsection
+    :float right
+    :font-size small
+  ul
+    :list-style disc
+    
 .navigation
   :padding 10px 0
   .nav-next
@@ -117,6 +138,9 @@ a
 
 .sidebar
   :font-size small  
+  h3
+    :text-transform uppercase
+    :margin 10px 0
   li
     :list-style none
   ul  
@@ -143,7 +167,7 @@ a
 // Footer
 
 #footer
-  :background url("../png/backs.png")
+  :background url("backs.png")
   :background-position -1920px
   :font-size x-small
   :color #aaa
@@ -175,7 +199,4 @@ a
     :font-size small
 
 #copyright
-  :padding= !px20
-
-
-    
+  :padding= 0 !px20
