@@ -93,7 +93,7 @@ class AesteTemplate extends QuickTemplate {
        <div class="column grid_9"><div id="content">
        <h1><?=$this->html('titletext')?></h1>
        <?=$this->html('bodytext')?>
-	   <small style="font-size:small;color:#ccc;">
+	   <small style="font-size:x-small;color:#aaa;line-height:1;">
        <?=($this->data['copyright'])?'&nbsp;'.$this->html('copyright'):''?>
        <?=($this->data['lastmod'])?'&nbsp;'.$this->html('lastmod'):''?>
        <?=($this->data['viewcount'])?'&nbsp;'.$this->html('viewcount'):''?>
