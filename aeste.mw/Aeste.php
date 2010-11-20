@@ -24,9 +24,9 @@ class SkinAeste extends SkinTemplate {
 	  $out->addLink(array('href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,bold&subset=latin',
 			      'rel' => 'stylesheet',
 			      'type' => 'text/css'));
-	  $out->addStyle('aeste/reset.css', 'screen');
-	  $out->addStyle('aeste/grid.css', 'screen');
-	  $out->addStyle('aeste/main.css', 'screen');
+	  $out->addStyle('aeste/reset.css','screen');
+	  $out->addStyle('aeste/grid.css','screen');
+	  $out->addStyle('aeste/main.css','screen');
 	  $out->addMeta('http:X-UA-Compatible','IE=8');
 	}
 }
@@ -46,7 +46,7 @@ class AesteTemplate extends QuickTemplate {
 <div id="wrapper">
    <div id="header" class="row">
    <div class="column grid_3">
-    <a href="<?=htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="AESTE" rel="home"><img id="logo" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/logo.png'?>"></a>
+   <a href="<?=htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" title="AESTE" rel="home"><img id="logo" src="<?=$this->data['stylepath'].'/'.$this->data['stylename'].'/logo.png'?>"></a>
    </div>
    <div class="column grid_9">
     <ul class="nav">
@@ -64,19 +64,48 @@ class AesteTemplate extends QuickTemplate {
    <div class="row wline"></div>
    <div id="container" class="row">   
    <div class="column grid_3 sidebar">
+   <div class="primary">
    <?
-   foreach ($this->data['sidebar'] as $box => $cont) {
+   $sidebar = $this->data['sidebar'];
+
+    if (isset($sidebar['LANGUAGES'])) unset($sidebar['LANGUAGES']);
+    if (isset($sidebar['TOOLBOX'])) unset($sidebar['TOOLBOX']);
+    if (isset($sidebar['SEARCH'])) unset($sidebar['SEARCH']);
+    
+    foreach ($sidebar as $box => $cont) {
       $this->customBox($box, $cont);
     }
-   ?>
+    ?>
+   </div><!--primary-->
+   <div class="secondary">
+    <ul><h3>Actions</h3>
+       <? foreach ($this->data['content_actions'] as $menu):?>
+       <li><a href="<?=htmlspecialchars($menu['href'])?>"?><?=htmlspecialchars($menu['text'])?></a></li>
+       <? endforeach;?>
+    </ul>    
+    <ul><h3>Meta</h3>
+       <? foreach ($this->data['personal_urls'] as $menu):?>
+       <li><a href="<?=htmlspecialchars($menu['href'])?>"><?=htmlspecialchars($menu['text'])?></a></li>
+       <? endforeach;?>
+       </ul>
+   </div><!--secondary-->
    </div><!--sidebar-->
+       <div class="column grid_9"><div id="content">
+       <h1><?=$this->html('titletext')?></h1>
+       <?=$this->html('bodytext')?>
+	   <small style="font-size:small;color:#ccc;">
+       <?=($this->data['copyright'])?'&nbsp;'.$this->html('copyright'):''?>
+       <?=($this->data['lastmod'])?'&nbsp;'.$this->html('lastmod'):''?>
+       <?=($this->data['viewcount'])?'&nbsp;'.$this->html('viewcount'):''?>
+	   </small>
+       </div></div>
    </div><!--container-->
 
 <div class="hline row"></div>
 <div id="footer" class="row">
    <div id="lfoot" class="column grid_3">
    <div id="addr" class="">
-   <b>Aeste Works (M) S/B</b><br/>
+   <b>AESTE WORKS (M) SB</b><br/>
    6-3-6 Queens Avenue<br/>
    Jalan Bayam, Cheras<br/>
    55100 Kuala Lumpur, Malaysia<br/>
@@ -87,17 +116,13 @@ class AesteTemplate extends QuickTemplate {
    <div class="row">
    <div class="column grid_9">
     <ul class="nav">
-
-       <?
-       foreach ($this->data['content_actions'] as $menu) {
-      print('<li><a href="'.htmlspecialchars($menu['href']).'">'.htmlspecialchars($menu['text']).'</a></li>');
-    }
-       ?>
-
+    <li><a href="http://www.aeste.my/careers">Careers</a></li>
+    <li><a href="http://www.aeste.my/donate">Contribute</a></li>
+    <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
     </ul>
    </div>
    <div id="copyright" class="column grid_9">
-   Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.
+	Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.
    </div>
   </div>
 </div><!--rfoot-->
@@ -105,9 +130,7 @@ class AesteTemplate extends QuickTemplate {
   </div>
 <div class="wline row"></div>
 </div><!--wrapper-->
-
-		      <pre><? //print_r($this->data); ?></pre>
-
+			   <pre><? //print_r($this->data); ?></pre>
 <?php $this->html('bottomscripts'); /* JS call to runBodyOnloadHook */ ?>
 <?php $this->html('reporttime') ?>
 <?php if ( $this->data['debug'] ): ?>

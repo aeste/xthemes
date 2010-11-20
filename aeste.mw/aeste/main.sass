@@ -25,6 +25,11 @@ a
   :background url("backs.png")
   :height 30px
 
+h1
+  :font-size x-large
+h2
+  :font-size large
+
 #wrapper
   :background= !fff
   :width 980px
@@ -107,7 +112,18 @@ a
 
 #content
   :padding-left= !px20
-
+  :line-height 1.5
+  :color #333
+  p
+    :margin-bottom= !px20
+  .printfooter 
+    :display none
+  .editsection
+    :float right
+    :font-size small
+  ul
+    :list-style disc
+    
 .navigation
   :padding 10px 0
   .nav-next
@@ -117,6 +133,9 @@ a
 
 .sidebar
   :font-size small  
+  h3
+    :text-transform uppercase
+    :margin 10px 0
   li
     :list-style none
   ul  
@@ -175,4 +194,4 @@ a
     :font-size small
 
 #copyright
-  :padding= !px20
+  :padding= 0 !px20
