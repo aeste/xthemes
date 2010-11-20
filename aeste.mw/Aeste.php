@@ -20,14 +20,15 @@ class SkinAeste extends SkinTemplate {
 	$template = 'AesteTemplate', $useHeadElement = true;
 
 	function setupSkinUserCss(OutputPage $out) {
-	  //parent::setupSkinUserCss($out);
-	  $out->addLink(array('href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,bold&subset=latin',
+	  parent::setupSkinUserCss($out);
+	  $out->addLink(array('href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,bold',
 			      'rel' => 'stylesheet',
 			      'type' => 'text/css'));
 	  $out->addStyle('aeste/reset.css','screen');
 	  $out->addStyle('aeste/grid.css','screen');
 	  $out->addStyle('aeste/main.css','screen');
 	  $out->addMeta('http:X-UA-Compatible','IE=8');
+	  $out->setHTMLTitle('AESTE | engineering elegance');
 	}
 }
 
