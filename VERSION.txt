@@ -1,3 +1,4 @@
+Release c-2010-11-21:	Gamma release for wordpress theme.
 Release a-2010-11-20:	Alpha release for mediawiki theme.
 Release	b-2010-11-17:	Beta release of the wordpress theme.
 Release a-2010-11-17:	Alpha release of a wordpress theme.

@@ -5,7 +5,7 @@
   <div id="content">  
   <?php the_post() ?>
   <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-  <h2 class="entry-title"><?php the_title() ?></h2>
+  <h1 class="entry-title"><?php the_title() ?></h1>
   <div class="entry-content">
   <?php the_content() ?>
   <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
