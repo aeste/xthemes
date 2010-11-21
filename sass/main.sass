@@ -110,10 +110,19 @@ h2
   :background url("backs.png")
   :background-position -1920px
 
+.meta
+  :color #aaa
+  :font-size small
+  :text-transform lowercase
+  :text-align right
+  a
+    :color #a00
+
 #content
   :padding-left= !px20
-  :line-height 1.5
+  :line-height 1.3
   :color #333
+
   .post, .comments
     :clear both
     :margin-bottom 30px
@@ -126,11 +135,16 @@ h2
   .editsection
     :float right
     :font-size small
+  ul, ol
+    :margin-left= (!px20 * 2)
   ul
     :list-style disc
+  ol
+    :list-style decimal
     
 .navigation
   :padding 10px 0
+  :margin-bottom= !px20
   .nav-next
     :float right
   .nav-previous
