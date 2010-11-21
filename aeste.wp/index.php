@@ -14,13 +14,16 @@
 
 				 <div id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
 				 <h2 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark"><?php the_title() ?></a></h2>
-				 <div class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php unset($previousday); printf( __( '%1$s &#8211; %2$s', 'sandbox' ), the_date( '', '', '', false ), get_the_time() ) ?></abbr></div>
+				 <div class="entry-date meta"></div>
 				 <div class="entry-content">
 <?php the_excerpt( __( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?>
 
 				<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
 				</div>
-				<div class="entry-meta">
+				<div class="entry-meta meta">
+				 <abbr class="published" title="<?php the_time('c') ?>">
+				 <?php unset($previousday); printf( __( '%1$s', 'sandbox' ), the_date( '', '', '', false ) ) ?>
+				 </abbr>
 					<span class="author vcard"><?php printf( __( 'By %s', 'sandbox' ), '<a class="url fn n" href="' . get_author_link( false, $authordata->ID, $authordata->user_nicename ) . '" title="' . sprintf( __( 'View all posts by %s', 'sandbox' ), $authordata->display_name ) . '">' . get_the_author() . '</a>' ) ?></span>
 					<span class="meta-sep">|</span>
 					<span class="cat-links"><?php printf( __( 'Posted in %s', 'sandbox' ), get_the_category_list(', ') ) ?></span>
@@ -42,5 +45,4 @@
                    </div>
 		</div><!-- #content -->
 	</div><!-- #container -->
-
 <?php get_footer() ?>
