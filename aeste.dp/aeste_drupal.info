@@ -1,6 +1,6 @@
 name = aeste_dp
 description = Aeste theme for Drupal 6
-screenshot = css/images/screenshot.png
+screenshot = screenshot.png
 core = "6.x"
 project = "aeste_dp"
 engine = phptemplate
@@ -23,11 +23,13 @@ features[] = favicon
 features[] = primary_links
 features[] = secondary_links
 
+stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/grid.css
-stylesheets[all][] = css/default.css
-stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/style.css
 stylesheets[all][] = css/local.css
+;stylesheets[all][] = css/default.css
+;stylesheets[all][] = css/layout.css
+;stylesheets[all][] = css/style.css
+;stylesheets[all][] = css/local.css
 stylesheets[print][] = css/print.css
              
 settings[aeste_dp_zen_tabs]             = 1

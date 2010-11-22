@@ -2,7 +2,7 @@
   <div class="comment-inner">
 
     <?php if ($title): ?>
-      <h3 class="title"><?php print $title ?></h3>
+      <h2 class="title"><?php print $title ?></h2>
     <?php endif; ?>
 
     <?php if ($new) : ?>

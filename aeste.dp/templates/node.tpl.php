@@ -7,20 +7,20 @@
 
     <?php print $picture; ?>
 
-    <?php if ($submitted): ?>
-      <span class="submitted"><?php print $submitted; ?></span>
-    <?php endif; ?>
-
     <div class="content">
       <?php print $content; ?>
     </div>
 
+    <?php if ($submitted): ?>
+      <div class="meta submitted"><?php print $submitted; ?></div>
+    <?php endif; ?>
+
     <?php if ($terms): ?>
-      <div class="taxonomy"><?php print $terms; ?></div>
+      <div class="taxonomy meta"><?php print $terms; ?></div>
     <?php endif;?>
 
     <?php if ($links): ?> 
-      <div class="links"> <?php print $links; ?></div>
+      <div class="links meta"> <?php print $links; ?></div>
     <?php endif; ?>
 
   </div> <!-- /node-inner -->
