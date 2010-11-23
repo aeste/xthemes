@@ -21,7 +21,11 @@ class SkinAeste extends SkinTemplate {
 
 	function setupSkinUserCss(OutputPage $out) {
 	  parent::setupSkinUserCss($out);
-	  $out->addStyle('aeste/font/stylesheet.css','all');
+	  //<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+	  $out->addLink(array('rel' => 'stylesheet',
+			      'type' => 'text/css',
+			      'href' => 'http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold'));
+	  //$out->addStyle('aeste/font/stylesheet.css','all');
 	  $out->addStyle('aeste/reset.css','screen');
 	  $out->addStyle('aeste/grid.css','screen');
 	  $out->addStyle('aeste/main.css','screen');

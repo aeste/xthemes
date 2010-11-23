@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=8">
    <?//=$head; ?>
    <link rel="shortcut icon" href="<?=$base_path . path_to_theme()?>/ae.ico">
-   <link href="<?=$base_path . path_to_theme()?>/font/stylesheet.css" rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
    <?=$styles; ?>
    <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
    <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
