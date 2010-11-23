@@ -2,52 +2,74 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
    <head>  
    <title><?php print $head_title; ?></title>
-   <?php print $head; ?>
-   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
-   <?php print $styles; ?>
+   <meta http-equiv="X-UA-Compatible" content="IE=8">
+   <?//=$head; ?>
+   <link rel="shortcut icon" href="<?=$base_path . path_to_theme()?>/ae.ico">
+   <link href="<?=$base_path . path_to_theme()?>/font/stylesheet.css" rel='stylesheet' type='text/css'>
+   <?=$styles; ?>
    <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
    <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
-   <?php print $scripts; ?>
+   <?=$scripts; ?>
    </head>
    <body class="<?php print $body_classes; ?>">
-   <div id="skip"><a href="#content"><?php print t('Skip to Content'); ?></a> <a href="#navigation"><?php print t('Skip to Navigation'); ?></a></div>  
-   <div id="page#">
+   <div id="wrapper">
    
    <!-- ______________________ HEADER _______________________ -->
 
-   <div id="header">
-   <div id="logo-title" class="row">	
-   <div class="column grid_3">   
-   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="http://files.aeste.net/img/text5019_150x48.png" alt="<?php print t('Home'); ?>"/></a>
+   <div id="header" class="row">
+   <div class="column grid_3">
+   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img id="logo" src="<?=$base_path . path_to_theme()?>/css/logo.png" alt="<?php print t('Home'); ?>"/></a>
    </div>
+
    <div id="name-and-slogan" class="column grid_9">
-    <ul class="hnav">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Wiki</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Files</a></li>
-    <li><a href="#">Contact</a></li>
+
+    <ul class="nav">
+    <li><a href="http://www.aeste.my">Home</a></li>
+    <li><a href="http://blog.aeste.my">Blog</a></li>
+    <li><a href="http://wiki.aeste.my">Wiki</a></li>
+    <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
+
    </div> <!-- /name-and-slogan -->
-   </div> <!-- /logo-title -->
+   </div> <!-- /header -->
 
-      <?php if ($header): ?>
-        <div id="header-region">
-          <?php print $header; ?>
-        </div>
-      <?php endif; ?>
-
-      <?php print $search_box; ?>
-
-    </div> <!-- /header -->
+   <div id="redbox" class="row">
+   <div id="lred" class="column grid_3">
+   <img width="200" height="200" id="quote" src="<?=$base_path . path_to_theme()?>/css/quote.png">
+   </div>
+   <img width="720" height="240" id="banner" src="<?=$base_path . path_to_theme()?>/css/banner.png">   
+   </div>
+   <div class="row wline">&nbsp;</div>
 
     <!-- ______________________ MAIN _______________________ -->
 
-    <div id="main" class="clearfix row">
-    
-      <div id="content">
-        <div id="content-inner" class="inner column center">
+    <div id="container" class="row">
+
+   <div class="sidebar column grid_3">
+        <?php if (!empty($primary_links) || !empty($secondary_links)): ?>
+          <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "with-main-menu"; } if (!empty($secondary_links)) { print " with-sub-menu"; } ?>">
+	     <?php// if (!empty($primary_links)){ print theme('links', $primary_links, array('id' => 'primary', 'class' => 'links main-menu')); } ?>
+	     <?php// if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
+          </div> <!-- /navigation -->
+        <?php endif; ?>
+        <?php if ($left): ?>
+          <div id="sidebar-first" class="first">
+            <div id="sidebar-first-inner" class="inner">
+              <?php print $left; ?>
+            </div>
+          </div>
+        <?php endif; ?> <!-- /sidebar-left -->
+        <?php if ($right): ?>
+          <div id="sidebar-second" class="second">
+            <div id="sidebar-second-inner" class="inner">
+              <?php print $right; ?>
+            </div>
+          </div>
+        <?php endif; ?> <!-- /sidebar-second -->
+   </div>
+
+      <div id="content-outer" class="column grid_9">
+        <div id="content" class="inner">
 
           <?php if ($content_top): ?>
             <div id="content-top">
@@ -58,7 +80,7 @@
           <?php if ($breadcrumb || $title || $mission || $messages || $help || $tabs): ?>
             <div id="content-header">
 
-              <?php print $breadcrumb; ?>
+              <?=$breadcrumb; ?>
 
               <?php if ($title): ?>
                 <h1 class="title"><?php print $title; ?></h1>
@@ -68,9 +90,9 @@
                 <div id="mission"><?php print $mission; ?></div>
               <?php endif; ?>
 
-              <?php print $messages; ?>
+              <?=$messages; ?>
 
-              <?php print $help; ?> 
+              <?=$help; ?> 
 
               <?php if ($tabs): ?>
                 <div class="tabs"><?php print $tabs; ?></div>
@@ -94,43 +116,44 @@
           </div>
         </div> <!-- /content-inner /content -->
 
-        <?php if (!empty($primary_links) || !empty($secondary_links)): ?>
-          <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "with-main-menu"; } if (!empty($secondary_links)) { print " with-sub-menu"; } ?>">
-            <?php if (!empty($primary_links)){ print theme('links', $primary_links, array('id' => 'primary', 'class' => 'links main-menu')); } ?>
-            <?php if (!empty($secondary_links)){ print theme('links', $secondary_links, array('id' => 'secondary', 'class' => 'links sub-menu')); } ?>
-          </div> <!-- /navigation -->
-        <?php endif; ?>
-
-        <?php if ($left): ?>
-          <div id="sidebar-first" class="column sidebar first">
-            <div id="sidebar-first-inner" class="inner">
-              <?php print $left; ?>
-            </div>
-          </div>
-        <?php endif; ?> <!-- /sidebar-left -->
-
-        <?php if ($right): ?>
-          <div id="sidebar-second" class="column sidebar second">
-            <div id="sidebar-second-inner" class="inner">
-              <?php print $right; ?>
-            </div>
-          </div>
-        <?php endif; ?> <!-- /sidebar-second -->
-
       </div> <!-- /main -->
 
       <!-- ______________________ FOOTER _______________________ -->
 
+<div class="hline row"></div>
+<div id="footer" class="row">
+   <div id="lfoot" class="column grid_3">
+   <div id="addr" class="">
+   <b>AESTE WORKS (M) SB</b><br/>
+   6-3-6 Queens Avenue<br/>
+   Jalan Bayam, Cheras<br/>
+   55100 Kuala Lumpur, Malaysia<br/>
+   info&#64;aeste.my<br/>
+   </div>
+   </div><!--lfoot-->
+<div id="rfoot" class="column grid_9">
+   <div class="row">
+   <div class="column grid_9">
+    <ul class="nav">
+    <li><a href="http://www.aeste.my/careers">Careers</a></li>
+    <li><a href="http://www.aeste.my/donate">Contribute</a></li>
+    <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
+    </ul>
+   </div>
+   <div class="row">
+   <div id="copyright" class="column grid_9">
+   <p>Copyright &copy; 2000-<?=date('Y')?> Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.</p>
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>
-        <div id="footer"><div class="row">
           <?php print $footer_message; ?>
           <?php print $footer_block; ?>
-        </div></div> <!-- /footer -->
       <?php endif; ?>
-  <div id="copyright">
-  <div class="row">
-  Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd. All Rights Reserved.
-  </div></div>
+   </div>
+   </div>
+ </div>
+</div><!--rfoot-->
+</div>
+<div class="wline row"></div>
+
 
     </div> <!-- /page -->
     <?php print $closure; ?>
