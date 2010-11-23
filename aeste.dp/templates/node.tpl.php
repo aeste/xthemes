@@ -1,4 +1,4 @@
-<div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
+<div class="post node <?php print $classes;?>" id="node-<?php print $node->nid; ?>">
   <div class="node-inner">
 
     <?php if (!$page): ?>

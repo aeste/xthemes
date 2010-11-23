@@ -1,6 +1,6 @@
 // test
 
-!family = "'PT Sans', arial, serif"
+!family = "'Ubuntu', arial, sans-serif"
 !fff = #fff
 !f00 = #f00
 !c00 = #c00
@@ -55,9 +55,12 @@ h2
       :min-width 65px
       :border-left= !border
       :text-align center
+      &:last-child
+        :margin-right -20px
       &:first-child
         :border none
       a
+        :text-transform capitalize
         &:hover
           :color= !f00
 
@@ -137,7 +140,8 @@ h2
     :font-size small
   ul, ol
     :margin-left= (!px20 * 2)
-  ul0
+    :margin-bottom= !px20
+  ul
     :list-style disc
   ol
     :list-style decimal
@@ -160,7 +164,7 @@ h2
     :margin 10px 0
   li
     :list-style none
-  ul  
+  ul
     :margin 0
     :padding 0
     :border none
@@ -171,12 +175,20 @@ h2
       :margin= 0 !px20 0 0
       :border-top= !border
       :padding 0
+
+      :width auto
+      :text-align right
+      :display block
+      :padding 5px
+      :text-decoration none    
       a
+        :margin -5px
         :width auto
         :text-align right
         :display block
         :padding 5px
         :text-decoration none    
+
         &:hover
           :color= !f00
           :background #eee
@@ -201,10 +213,13 @@ h2
       :min-width 15px
       :border-left= !border
       :text-align center
+      &:last-child
+        :margin-right -20px
       &:first-child
         :border none
       a
-        :padding 5px
+        :padding 5px 10px
+        :text-transform uppercase
         :font-weight bold
         &:hover
           :color= !f00

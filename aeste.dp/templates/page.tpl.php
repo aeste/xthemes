@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=8">
    <?//=$head; ?>
    <link rel="shortcut icon" href="<?=$base_path . path_to_theme()?>/ae.ico">
-   <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+   <link href="<?=$base_path . path_to_theme()?>/font/stylesheet.css" rel='stylesheet' type='text/css'>
    <?=$styles; ?>
    <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
    <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
@@ -140,14 +140,15 @@
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
     </ul>
    </div>
+   <div class="row">
    <div id="copyright" class="column grid_9">
-   <p>Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.</p>
+   <p>Copyright &copy; 2000-<?=date('Y')?> Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.</p>
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>
           <?php print $footer_message; ?>
           <?php print $footer_block; ?>
       <?php endif; ?>
    </div>
-
+   </div>
  </div>
 </div><!--rfoot-->
 </div>
