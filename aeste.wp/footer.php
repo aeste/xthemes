@@ -18,8 +18,14 @@
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
     </ul>
    </div>
+   <div class="row">
    <div id="copyright" class="column grid_9">
-   Copyright &copy; 2000-2010 to Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.
+   <p>Copyright &copy; 2000-<?=date('Y')?> Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.</p>
+      <?php if(!empty($footer_message) || !empty($footer_block)): ?>
+          <?php print $footer_message; ?>
+          <?php print $footer_block; ?>
+      <?php endif; ?>
+   </div>
    </div>
   </div>
 </div><!--rfoot-->
