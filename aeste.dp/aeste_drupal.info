@@ -37,7 +37,7 @@ settings[aeste_dp_wireframe]            = 0
 settings[aeste_dp_block_editing]        = 1
 settings[aeste_dp_rebuild_registry]     = 0
 ; Information added by drupal.org packaging script on 2010-04-27
-version = "6.x-2.10"
+version = "6.x-10.11"
 core = "6.x"
 project = "aeste_dp"
 datestamp = "1272402606"
