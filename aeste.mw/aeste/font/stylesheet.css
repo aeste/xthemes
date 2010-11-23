@@ -15,14 +15,14 @@
 	src: url('Ubuntu-I-webfont.eot');
 	src: local('☺'), url('Ubuntu-I-webfont.woff') format('woff'), url('Ubuntu-I-webfont.ttf') format('truetype'), url('Ubuntu-I-webfont.svg#webfontpXedHGzY') format('svg');
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 }
 
 @font-face {
 	font-family: 'UbuntuBold';
 	src: url('Ubuntu-B-webfont.eot');
 	src: local('☺'), url('Ubuntu-B-webfont.woff') format('woff'), url('Ubuntu-B-webfont.ttf') format('truetype'), url('Ubuntu-B-webfont.svg#webfontN7lW3csj') format('svg');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 }
 
@@ -30,7 +30,7 @@
 	font-family: 'UbuntuBoldItalic';
 	src: url('Ubuntu-BI-webfont.eot');
 	src: local('☺'), url('Ubuntu-BI-webfont.woff') format('woff'), url('Ubuntu-BI-webfont.ttf') format('truetype'), url('Ubuntu-BI-webfont.svg#webfontiRDbe4gV') format('svg');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: bold;
+	font-style: italic;
 }
 

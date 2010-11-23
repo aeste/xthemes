@@ -21,9 +21,7 @@ class SkinAeste extends SkinTemplate {
 
 	function setupSkinUserCss(OutputPage $out) {
 	  parent::setupSkinUserCss($out);
-	  $out->addLink(array('href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,bold',
-			      'rel' => 'stylesheet',
-			      'type' => 'text/css'));
+	  $out->addStyle('aeste/font/stylesheet.css','all');
 	  $out->addStyle('aeste/reset.css','screen');
 	  $out->addStyle('aeste/grid.css','screen');
 	  $out->addStyle('aeste/main.css','screen');
