@@ -56,6 +56,8 @@ class AesteTemplate extends QuickTemplate {
     <li><a href="http://www.aeste.my">Home</a></li>
     <li><a href="http://blog.aeste.my">Blog</a></li>
     <li><a href="http://wiki.aeste.my">Wiki</a></li>
+   <li><a href="http://github.com/aeste">Code</a></li>
+   <li><a href="http://aeste.lighthouseapp.com">Bugs</a></li>
     <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
 
@@ -119,7 +121,7 @@ class AesteTemplate extends QuickTemplate {
    <div class="row">
    <div class="column grid_9">
     <ul class="nav">
-    <li><a href="http://www.aeste.my/about">About</a></li>
+    <li><a href="http://www.aeste.my/about">About Us</a></li>
     <li><a href="http://www.aeste.my/careers">Careers</a></li>
     <li><a href="http://www.aeste.my/donate">Contribute</a></li>
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>

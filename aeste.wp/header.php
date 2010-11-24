@@ -24,6 +24,8 @@
     <li><a href="http://www.aeste.my">Home</a></li>
     <li><a href="http://blog.aeste.my">Blog</a></li>
     <li><a href="http://wiki.aeste.my">Wiki</a></li>
+   <li><a href="http://github.com/aeste">Code</a></li>
+   <li><a href="http://aeste.lighthouseapp.com">Bugs</a></li>
     <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
 
