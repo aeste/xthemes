@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
     <link rel="shortcut icon" href="<?=bloginfo('template_directory')?>/ae.ico">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url') ?>" />
     <?php wp_head() // For plugins ?>
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url') ?>" title="<?php printf( __( '%s latest posts', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
@@ -24,6 +24,8 @@
     <li><a href="http://www.aeste.my">Home</a></li>
     <li><a href="http://blog.aeste.my">Blog</a></li>
     <li><a href="http://wiki.aeste.my">Wiki</a></li>
+   <li><a href="http://github.com/aeste">Code</a></li>
+   <li><a href="http://aeste.lighthouseapp.com">Bugs</a></li>
     <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
 

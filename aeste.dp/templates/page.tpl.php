@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=8">
    <?//=$head; ?>
    <link rel="shortcut icon" href="<?=$base_path . path_to_theme()?>/ae.ico">
-   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold' rel='stylesheet' type='text/css'>
    <?=$styles; ?>
    <!--[if lte IE 6]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie6.css";</style><![endif]-->
    <!--[if IE 7]><style type="text/css" media="all">@import "<?php print $base_path . path_to_theme() ?>/css/ie7.css";</style><![endif]-->
@@ -27,6 +27,8 @@
     <li><a href="http://www.aeste.my">Home</a></li>
     <li><a href="http://blog.aeste.my">Blog</a></li>
     <li><a href="http://wiki.aeste.my">Wiki</a></li>
+   <li><a href="http://github.com/aeste">Code</a></li>
+   <li><a href="http://aeste.lighthouseapp.com">Bugs</a></li>
     <li><a href="http://www.aeste.my/files">Files</a></li>
     </ul>
 
@@ -135,7 +137,7 @@
    <div class="row">
    <div class="column grid_9">
     <ul class="nav">
-    <li><a href="http://www.aeste.my/about">About</a></li>
+    <li><a href="http://www.aeste.my/about">About Us</a></li>
     <li><a href="http://www.aeste.my/careers">Careers</a></li>
     <li><a href="http://www.aeste.my/donate">Contribute</a></li>
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>

@@ -13,7 +13,7 @@
    <div class="row">
    <div class="column grid_9">
     <ul class="nav">
-    <li><a href="http://www.aeste.my/about">About</a></li>
+    <li><a href="http://www.aeste.my/about">About Us</a></li>
     <li><a href="http://www.aeste.my/careers">Careers</a></li>
     <li><a href="http://www.aeste.my/donate">Contribute</a></li>
     <li><a href="http://www.aeste.my/contactus">Contact Us</a></li>
