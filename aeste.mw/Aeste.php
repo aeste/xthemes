@@ -64,9 +64,12 @@ class AesteTemplate extends QuickTemplate {
    </div>
    </div><!--header-->
    <div id="redbox" class="row">
-   <div id="lred" class="column grid_3"><img width="200" height="200" id="quote" src="<?=$this->data['stylepath'].'/'.$this->data['stylename']?>/quote.png"></div>
-   <img width="720" height="240" id="banner" src="<?=$this->data['stylepath'].'/'.$this->data['stylename']?>/banner.png"></div><!--redbox-->
-   <div class="row wline"></div>
+   <div id="lred" class="column grid_3">
+   <a href="http://www.aeste.my/about"><img width="200" height="200" id="quote" src="<?=$base_path . path_to_theme()?>/css/quote.png"></a>
+   </div>
+   <a href="http://www.aeste.my/aemb"><img width="720" height="240" id="banner" src="<?=$base_path . path_to_theme()?>/css/banner.png"></a>
+   </div>
+   <div class="row wline">&nbsp;</div>
    <div id="container" class="row">   
    <div class="column grid_3 sidebar">
    <div class="primary">
