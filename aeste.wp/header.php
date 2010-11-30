@@ -32,8 +32,8 @@
     </div></div>
    <div id="redbox" class="row">
    <div id="lred" class="column grid_3">
-   <a href="http://www.aeste.my/about"><img width="200" height="200" id="quote" src="<?=$base_path . path_to_theme()?>/css/quote.png"></a>
+   <a href="http://www.aeste.my/about"><img width="200" height="200" id="quote" src="<?=bloginfo('template_directory')?>/css/quote.png"></a>
    </div>
-   <a href="http://www.aeste.my/aemb"><img width="720" height="240" id="banner" src="<?=$base_path . path_to_theme()?>/css/banner.png"></a>
+   <a href="http://www.aeste.my/aemb"><img width="720" height="240" id="banner" src="<?=bloginfo('template_directory')?>/css/banner.png"></a>
    </div>
    <div class="row wline">&nbsp;</div>
