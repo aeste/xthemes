@@ -21,7 +21,8 @@
    </div>
    <div class="row">
    <div id="copyright" class="column grid_9">
-   <p>Copyright &copy; 2000-<?=date('Y')?> Aeste Works (M) Sdn Bhd.<br/>All Rights Reserved.</p>
+   <p>Copyright &copy; 2000-<?=date('Y')?> Aeste Works (M) Sdn Bhd. All Rights Reserved.</p>
+   <p><a href="http://github.com/aeste/xthemes">Source</a> available on github.</p>
       <?php if(!empty($footer_message) || !empty($footer_block)): ?>
           <?php print $footer_message; ?>
           <?php print $footer_block; ?>
