@@ -3,10 +3,10 @@
    <div id="lfoot" class="column grid_3">
    <div id="addr" class="">
    <b>AESTE WORKS (M) SB</b><br/>
-   6-3-6 Queens Avenue<br/>
-   Jalan Bayam, Cheras<br/>
-   55100 Kuala Lumpur, Malaysia<br/>
-   info&#64;aeste.my<br/>
+   Queen's Avenue<br/>
+   6-3-6 Jalan Bayam<br/>
+   55100 Kuala Lumpur<br/>
+   Malaysia<br/>
    </div>
    </div><!--lfoot-->
 <div id="rfoot" class="column grid_9">
