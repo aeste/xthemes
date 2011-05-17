@@ -146,7 +146,6 @@ class AesteTemplate extends QuickTemplate {
   </div>
 <div class="wline row"></div>
 </div><!--wrapper-->
-<?php //  <pre><? print_r($this->data); ?></pre> ?>
 <?php $this->html('bottomscripts'); /* JS call to runBodyOnloadHook */ ?>
 <?php $this->html('reporttime') ?>
 <?php if ( $this->data['debug'] ): ?>
