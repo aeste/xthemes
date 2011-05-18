@@ -24,7 +24,7 @@ class SkinAeste extends SkinTemplate {
 	  //<link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
 	  $out->addLink(array('rel' => 'stylesheet',
 			      'type' => 'text/css',
-			      'href' => 'http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold'));
+			      'href' => 'http://fonts.googleapis.com/css?family=Ubuntu:light,regular,italic,bold'));
 	  //$out->addStyle('aeste/font/stylesheet.css','all');
 	  $out->addStyle('aeste/reset.css','screen');
 	  $out->addStyle('aeste/grid.css','screen');
